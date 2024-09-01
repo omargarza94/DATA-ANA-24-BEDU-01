@@ -1,0 +1,20 @@
+# Importar librerías
+import pandas as pd
+
+# Cargar el dataset
+df = pd.read_csv('Ejemplo_01_Titanic_Dataset.csv') # Modifica la ruta de acuerdo a tu entorno de trabajo
+
+# Mostrar las primeras filas del dataset
+print(df.head())
+
+# Calcular la media
+promedio_edad = df['Age'].mean()
+print(f'El promedio de edad de los pasajeros en el Titanic fue: {promedio_edad}')
+
+# Calcular la mediana
+mediana_edad = df['Age'].median()
+print(f'El valor central de la edad de los pasajeros en el Titanic fue: {mediana_edad}')
+
+# Calcular la moda
+moda_edad = df['Age'].mode()[0]
+print(f'La edad más común de los pasajeros en el Titanic fue: {moda_edad}')
